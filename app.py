@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from ytmusicapi import YTMusic
+from fastapi.middleware.cors import CORSMiddleware
 import yt_dlp
 
 app = FastAPI()
