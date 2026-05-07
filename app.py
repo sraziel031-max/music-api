@@ -37,7 +37,13 @@ def search(q: str):
         })
 
     return clean_results
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/stream/{video_id}")
 def stream(video_id: str):
